@@ -29,9 +29,9 @@ class ArmaServerDB
         $ARMA_SERVER_DB_TABLENAME="svodb";
         $ARMA_SERVER_DB_DSN="mysql:host=$ARMA_SERVER_DB_ADDRES;dbname=$ARMA_SERVER_DB_TABLENAME;charset=utf8";
 
-        // $pdo = new PDO(config('armaserver.pdo_dsn'), config('armaserver.db_user'), config('armaserver.db_password'));
+        return new PDO(config('armaserver.pdo_dsn'), config('armaserver.db_user'), config('armaserver.db_password'));
 
-        return new PDO($ARMA_SERVER_DB_DSN, $ARMA_SERVER_DB_USER, $ARMA_SERVER_DB_PASSWORDS);
+     //   return new PDO($ARMA_SERVER_DB_DSN, $ARMA_SERVER_DB_USER, $ARMA_SERVER_DB_PASSWORDS);
 
     }
 
