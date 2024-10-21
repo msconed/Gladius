@@ -17,7 +17,7 @@ class KillsStatistics extends Component
     public function mount() 
     {
         $steamid = Auth::user()->steamid;
-        $data = ArmaServerDB::getKillsStatistics($steamid) ?? [];
+        $data = ArmaServerDB::getKillsStatistics($steamid);
         $this->myStatistics = $data;
     } 
     public function render()
