@@ -23,14 +23,14 @@ class ServerInfo extends Component
 
     public function updateInfo() 
     {
-        try {
+
             $q = new ArmaServerInfo();
             $this->countPlayers = $q->countPlayers;
             $this->isOnlineText = '<i class="fa-solid fa-circle" style="color: #66ff00;"></i> Включен';
-        } catch (\Exception $e) {
+
             $this->countPlayers = 0;
             $this->isOnlineText = '<i class="fa-solid fa-circle" style="color: #ff0000;"></i> Выключен';
-        };
+
     }
 
 
