@@ -5,7 +5,7 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('login');
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
