@@ -37,7 +37,7 @@ class ArmaServerDB
 
     public static function getKillsStatistics($steamid)
     {
-        try {
+
             $pdo = self::getPDO();
 
             $stmt = $pdo->prepare('SELECT * FROM statistics WHERE steamid = :steamid');
@@ -45,9 +45,8 @@ class ArmaServerDB
     
             $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        } catch (\Exception $e) {
             $data = [];
-        }
+
         return $data;
     }
 
