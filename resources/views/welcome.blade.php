@@ -90,7 +90,7 @@
                                                 <span class="icon">
                                                     <i class="fa fa-braille"></i>
                                                 </span>
-                                                <span class="title">Services</span>
+                                                <span class="title">Скоро...</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174"
                                                 version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +116,7 @@
                                                 <span class="icon">
                                                     <i class="fa fa-id-badge"></i>
                                                 </span>
-                                                <span class="title">Resume</span>
+                                                <span class="title">Скоро...</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174"
                                                 version="1.1" xmlns="http://www.w3.org/2000/svg">
