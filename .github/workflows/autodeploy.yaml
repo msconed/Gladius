@@ -1,0 +1,40 @@
+
+
+
+#auto deploy  laravel ssh
+name: Auto Deploy Laravel
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.BEGET_GLADIUS_SERVER }}
+          username: ${{ secrets.BEGET_GLADIUS_USERNAME }} 
+          key: ${{ secrets.BEGET_GLADIUS_AUTODEPLOY }}
+
+          script: |
+            cd bws.su
+
+            git pull
+
+            php8.2 artisan down
+
+            php8.2 composer.phar install --no-dev --optimize-autoloader
+
+            php8.2 artisan migrate --force
+
+            php8.2 artisan config:cache
+
+            php8.2 artisan event:cache
+
+            php8.2 artisan route:cache
+
+            php8.2 artisan view:cache
+
+            php8.2 artisan up
+
