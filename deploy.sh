@@ -7,7 +7,7 @@ git pull
 
 php8.2 artisan down
 
-php8.2 composer install --no-dev --optimize-autoloader
+php8.2 composer.phar install --no-dev --optimize-autoloader
 
 php8.2 artisan migrate
 
