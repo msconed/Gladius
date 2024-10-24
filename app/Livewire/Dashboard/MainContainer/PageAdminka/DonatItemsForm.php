@@ -53,7 +53,8 @@ class DonatItemsForm extends Component
                     ['ОШБ Гранатомётчик', 'UA_GRENADER'], ['ОШБ БПЛА', 'UA_SPECUAV'],  ['ОШБ Пулемётчик', 'UA_GUNNER'],
                     ['ОШБ Командир', 'UA_COMMANDER'], 
                     
-                    ['[RU] Спец. набор БПЛА', 'specialUAV_RU'],  ['[UA] Спец. набор БПЛА', 'specialUAV_UA'] 
+                    ['[RU] Спец. набор БПЛА', 'specialUAV_RU'],  ['[UA] Спец. набор БПЛА', 'specialUAV_UA'],
+                    ['[RU] Набор ПРОРЫВ', 'PRORIV']
         ];
         
         $this->donat_columns = $items;
