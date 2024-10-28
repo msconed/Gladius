@@ -38,3 +38,6 @@ jobs:
 
             php8.2 artisan up
 
+            php8.2 artisan schedule:interrupt
+
+            php8.2 artisan schedule:work    

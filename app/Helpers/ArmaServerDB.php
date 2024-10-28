@@ -28,11 +28,12 @@ class ArmaServerDB
         $ARMA_SERVER_DB_ADDRES="localhost";
         $ARMA_SERVER_DB_TABLENAME="svodb";
         $ARMA_SERVER_DB_DSN="mysql:host=$ARMA_SERVER_DB_ADDRES;dbname=$ARMA_SERVER_DB_TABLENAME;charset=utf8";
-
-        return new PDO(config('armaserver.pdo_dsn'), config('armaserver.db_user'), config('armaserver.db_password'));
-
-     //   return new PDO($ARMA_SERVER_DB_DSN, $ARMA_SERVER_DB_USER, $ARMA_SERVER_DB_PASSWORDS);
-
+        
+        if(env('APP_ENV') == 'local') {
+            return new PDO($ARMA_SERVER_DB_DSN, $ARMA_SERVER_DB_USER, $ARMA_SERVER_DB_PASSWORDS);
+        } else {
+            return new PDO(config('armaserver.pdo_dsn'), config('armaserver.db_user'), config('armaserver.db_password'));
+        }
     }
 
     public static function getKillsStatistics($steamid)
@@ -45,6 +46,21 @@ class ArmaServerDB
     
             $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
+        } catch (\Exception $e) {
+            $data = [];
+        }
+        return $data;
+    }
+
+    public static function getUsersInfoByQuery($q)
+    {
+        try {
+            $pdo = self::getPDO();
+
+            $q = "%$q%";
+            $stm = $pdo->prepare("SELECT * FROM players WHERE name LIKE ? OR steamid LIKE ?");
+            $stm->execute([$q, $q]);
+            $data = $stm->fetchAll();
         } catch (\Exception $e) {
             $data = [];
         }

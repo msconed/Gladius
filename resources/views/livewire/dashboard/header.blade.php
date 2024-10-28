@@ -12,7 +12,7 @@
                         </svg>
                     </button>
 
-                    <div class="flex justify-center flex-1 lg:mr-32"></div>
+                    <div class="flex justify-center flex-1 lg:mr-32"> </div>
                     <ul class="flex flex-shrink-0 space-x-6 items-end">
                         <!-- Profile menu -->
                         <li class="relative">

@@ -8,7 +8,7 @@ use Exception;
 class ArmaServerInfo
 {
 
-    protected $serverAddress = '62.122.214.181';
+    protected $serverAddress = '127.0.0.1';
     protected $serverPort = 2303;
     protected $sq_timeout = 1;
     public $SQ;
@@ -31,6 +31,7 @@ class ArmaServerInfo
 
     public function __construct()
     {
+        $this->serverAddress = config('armaserver.server_adress');
         $this->SQ = new SourceQuery();
         $this->SQ->Connect( $this->serverAddress, $this->serverPort, $this->sq_timeout );
         $this->serverInfo = $this->SQ->GetInfo();
