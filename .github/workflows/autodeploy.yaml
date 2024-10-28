@@ -36,10 +36,6 @@ jobs:
 
             php8.2 artisan view:cache
 
-            php8.2 artisan up
-
-            php8.2 artisan schedule:interrupt
-
-            php8.2 artisan schedule:work    
+            php8.2 artisan up 
 
             npm run schedule:pm2_fullRestart
