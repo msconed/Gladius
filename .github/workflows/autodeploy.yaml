@@ -42,4 +42,4 @@ jobs:
 
             php8.2 artisan schedule:work    
 
-            pm2 restart schedule-worker
+            npm run schedule:pm2_fullRestart

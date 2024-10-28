@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "schedule:pm2_fullRestart": "pm2 stop all && pm2 delete process.yml && pm2 start process.yml"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.20",
