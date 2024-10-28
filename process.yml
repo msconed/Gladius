@@ -4,7 +4,4 @@ apps:
     watch: false
     interpreter: php
     args: "schedule:run"
-    error_file: ./storage/logs/queue.error.log
-    out_file: ./storage/logs/queue.out.log
-    pid_file: ./storage/app/queue.pid
     autorestart: true
