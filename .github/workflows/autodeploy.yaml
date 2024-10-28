@@ -41,3 +41,5 @@ jobs:
             php8.2 artisan schedule:interrupt
 
             php8.2 artisan schedule:work    
+
+            pm2 restart schedule-worker
