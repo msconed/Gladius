@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div wire:loading.class="hidden">
-                        <i class="fa-solid fa-circle" style="color: #ff0000;"></i> Выключить сервер
+                        <i class="fa-solid fa-circle" style="color: #ff0000;"></i>&nbsp;Выключить сервер
                     </div>
                 </button>
 
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div wire:loading.class="hidden">
-                        <i class="fa-solid fa-arrows-rotate"></i> Перезагрузить сервер
+                        <i class="fa-solid fa-arrows-rotate"></i>&nbsp;Перезагрузить сервер
                     </div>
                 </button>
             @else
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <div wire:loading.class="hidden">
-                        <i class="fa-solid fa-circle" style="color: #66ff00;"></i> Включить сервер
+                        <i class="fa-solid fa-circle" style="color: #66ff00;"></i>&nbsp;Включить сервер
                     </div>
 
                 </button>

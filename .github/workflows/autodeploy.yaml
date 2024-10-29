@@ -45,5 +45,3 @@ jobs:
             npm install -g pm2
 
             php8.2 artisan up 
-
-            npm run schedule:pm2_fullRestart

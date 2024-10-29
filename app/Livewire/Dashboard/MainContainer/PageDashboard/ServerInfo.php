@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Cache;
 use Livewire\Component;
 use App\Helpers\ArmaServerInfo;
 use App\Helpers\ArmaServerDB;
+use App\Helpers\ArmaServer;
 
 class ServerInfo extends Component
 {
@@ -25,16 +26,16 @@ class ServerInfo extends Component
     {
         
         
-        $isOnline = Cache::get('ArmaServerIsOnline', false);
-        $countPlayers = Cache::get('ArmaServerCountPlayers', 0);
+        $isOnline = ArmaServer::serverStatus();
+        $countPlayers = ArmaServer::getCountPlayers();
         if ($isOnline)
         {
             $this->countPlayers = $countPlayers;
-            $this->isOnlineText = '<i class="fa-solid fa-circle" style="color: #66ff00;"></i> Включен';
+            $this->isOnlineText = '<i class="fa-solid fa-circle" style="color: #66ff00;"></i>&nbsp;Включен';
         } else
         {
             $this->countPlayers = $countPlayers;
-            $this->isOnlineText = '<i class="fa-solid fa-circle" style="color: #ff0000;"></i> Выключен';
+            $this->isOnlineText = '<i class="fa-solid fa-circle" style="color: #ff0000;"></i>&nbsp;Выключен';
         }
     }
 
