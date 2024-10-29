@@ -43,7 +43,7 @@ class ArmaServer
             if ($response) {
                 return $response;
             } else {
-                return 0;
+                return "~~";
             }
 
     }
